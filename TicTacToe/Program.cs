@@ -197,7 +197,10 @@
                 if (IsEmpty(move))
                     MakeMove(move);
                 else
+                {
                     Console.WriteLine("Please select an empty tile!");
+                    continue;
+                }
                 state = CheckState();
             }
 
@@ -217,7 +220,10 @@
                 if (IsEmpty(move))
                     MakeMove(move);
                 else
+                {
                     Console.WriteLine("Please select an empty tile!");
+                    continue;
+                }
                 state = CheckState();
                 if (state != State.NotFinished) break;
                 AiMove();
